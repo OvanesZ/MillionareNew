@@ -18,6 +18,8 @@
 		4E8CF4EE282FD11200B8E592 /* MillionareNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8CF4ED282FD11200B8E592 /* MillionareNewUITests.swift */; };
 		4E8CF4F0282FD11200B8E592 /* MillionareNewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8CF4EF282FD11200B8E592 /* MillionareNewUITestsLaunchTests.swift */; };
 		4E8CF4FD282FD19A00B8E592 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8CF4FC282FD19A00B8E592 /* Questions.swift */; };
+		4EC5883C282FE21100CF10A4 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5883B282FE21100CF10A4 /* GameSession.swift */; };
+		4EC5883E28302AED00CF10A4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5883D28302AED00CF10A4 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		4E8CF4ED282FD11200B8E592 /* MillionareNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionareNewUITests.swift; sourceTree = "<group>"; };
 		4E8CF4EF282FD11200B8E592 /* MillionareNewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionareNewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4E8CF4FC282FD19A00B8E592 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		4EC5883B282FE21100CF10A4 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		4EC5883D28302AED00CF10A4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				4E8CF4DA282FD11100B8E592 /* Info.plist */,
 				4E8CF4FE282FD25A00B8E592 /* Models */,
 				4E5A92B2282FDC3B00FBA898 /* View */,
+				4EC5883B282FE21100CF10A4 /* GameSession.swift */,
+				4EC5883D28302AED00CF10A4 /* Game.swift */,
 			);
 			path = MillionareNew;
 			sourceTree = "<group>";
@@ -282,8 +288,10 @@
 			files = (
 				4E5A92AF282FDC1A00FBA898 /* MainMenuViewController.swift in Sources */,
 				4E8CF4FD282FD19A00B8E592 /* Questions.swift in Sources */,
+				4EC5883E28302AED00CF10A4 /* Game.swift in Sources */,
 				4E8CF4CD282FD11000B8E592 /* AppDelegate.swift in Sources */,
 				4E5A92B1282FDC2900FBA898 /* GameViewController.swift in Sources */,
+				4EC5883C282FE21100CF10A4 /* GameSession.swift in Sources */,
 				4E8CF4CF282FD11000B8E592 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
