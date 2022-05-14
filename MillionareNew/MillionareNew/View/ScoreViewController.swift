@@ -16,6 +16,12 @@ class ScoreViewController: UIViewController {
         }
     }
     
+    private let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        
+        return dateFormatter
+    }()
     
     
     
@@ -37,7 +43,7 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath)
         let record = Game.shared.records[indexPath.row]
-        cell.textLabel?.text = record.name
+        cell.textLabel?.text = dateFormatter.string(from: record.date ?? Date.now)
         cell.detailTextLabel?.text = "\(record.score)"
         
         return cell

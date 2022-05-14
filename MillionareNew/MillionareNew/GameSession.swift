@@ -12,6 +12,7 @@ class GameSession {
     var allQuestionsCount: Questions?
     var score = 0
     var name = ""
+    var date: Date?
     var question: Questions?
     
 }

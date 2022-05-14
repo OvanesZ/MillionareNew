@@ -10,5 +10,5 @@ import UIKit
 
 struct Record: Codable {
     let score: Int?
-    let name: String?
+    let date: Date?
 }

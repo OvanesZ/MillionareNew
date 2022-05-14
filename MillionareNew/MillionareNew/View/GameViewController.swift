@@ -133,7 +133,7 @@ class GameViewController: UIViewController {
             } else {
                 dismiss(animated: true, completion: {
     
-                    self.game.addRecord(record: Record(score: self.gameSession?.score, name: self.gameSession?.name))
+                    self.game.addRecord(record: Record(score: self.gameSession?.score, date: self.gameSession?.date))
                     self.delegate?.returnLastGameResult(gameSession: self.gameSession)
                     self.gameSession = nil
                 })
