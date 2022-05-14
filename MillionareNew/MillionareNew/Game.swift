@@ -12,11 +12,26 @@ class Game {
     var result: [Int] = []
     var name = ""
     var gameSession: GameSession?
+    let recordsCaretaker = RecordsCaretaker()
+    
+    private(set) var records: [Record] = [] {
+        didSet {
+            recordsCaretaker.save(records: records)
+        }
+    }
     
     private init() {
         
     }
     
     static let shared = Game()
+    
+    func addRecord(record: Record) {
+        records.append(record)
+    }
+    
+    func clearRecords() {
+        records = []
+    }
     
 }

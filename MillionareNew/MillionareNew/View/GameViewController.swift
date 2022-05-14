@@ -9,6 +9,8 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    let game = Game.shared
+    var delegate: LastGameResultProtocol?
     
     var oneAnswerButton = UIButton()
     var twoAnswerButton = UIButton()
@@ -16,6 +18,7 @@ class GameViewController: UIViewController {
     var fourAnswerButton = UIButton()
     var questionLabel = UILabel()
     
+    private var gameSession: GameSession? = GameSession()
     
     func addButtons() {
         
@@ -57,13 +60,87 @@ class GameViewController: UIViewController {
     
     
     @objc func pressButton(_ sender: UIButton) {
-        
+        switch sender.tag {
+        case 1:
+            isAnswerRigth(button: oneAnswerButton)
+        case 2:
+            isAnswerRigth(button: twoAnswerButton)
+        case 3:
+            isAnswerRigth(button: threeAnswerButton)
+        case 4:
+            isAnswerRigth(button: fourAnswerButton)
+        default:
+            return
+        }
     }
     
     
     
     
+    private func configureActualQuestion() {
+        guard let score = gameSession?.score else { return }
+        
+        switch score {
+        case 0:
+            gameSession?.question = QuestionEnum.first.questions
+        case 10:
+            gameSession?.question = QuestionEnum.second.questions
+        case 20:
+            gameSession?.question = QuestionEnum.third.questions
+        case 30:
+            gameSession?.question = QuestionEnum.fourth.questions
+        case 40:
+            gameSession?.question = QuestionEnum.fifth.questions
+        default:
+            break
+        }
+        showNewQuestion()
+    }
     
+    
+    
+    
+    private func showNewQuestion() {
+        guard let gameSession = gameSession, let question = gameSession.question else { return }
+            
+        questionLabel.text = question.question
+        oneAnswerButton.setTitle(question.firstAnswer, for: .normal)
+        oneAnswerButton.backgroundColor = .lightGray
+        twoAnswerButton.setTitle(question.secondAnswer, for: .normal)
+        twoAnswerButton.backgroundColor = .lightGray
+        threeAnswerButton.setTitle(question.thirdAnswer, for: .normal)
+        threeAnswerButton.backgroundColor = .lightGray
+        fourAnswerButton.setTitle(question.fourthAnswer, for: .normal)
+        fourAnswerButton.backgroundColor = .lightGray
+    }
+    
+    
+    
+    private func isAnswerRigth(button: UIButton) {
+        if let answer = button.titleLabel?.text, let question = gameSession?.question {
+            if question.isAnswerTrue(userAnswer: answer) {
+                gameSession?.score += 10
+
+//                DispatchQueue.main.async {
+//                button.backgroundColor = .green
+//                }
+                
+//                DispatchQueue.global(qos: .userInteractive).async {
+//                    self.configureActualQuestion()
+//                }
+                configureActualQuestion()
+                
+            } else {
+                dismiss(animated: true, completion: {
+    
+                    self.game.addRecord(record: Record(score: self.gameSession?.score, name: self.gameSession?.name))
+                    self.delegate?.returnLastGameResult(gameSession: self.gameSession)
+                    self.gameSession = nil
+                })
+                    
+            }
+        }
+    }
     
     
 
@@ -71,8 +148,15 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         addButtons()
+        configureActualQuestion()
     }
     
 
 
+}
+
+
+
+protocol LastGameResultProtocol {
+    func returnLastGameResult(gameSession: GameSession?)
 }

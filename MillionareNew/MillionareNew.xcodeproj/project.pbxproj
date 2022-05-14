@@ -20,6 +20,8 @@
 		4E8CF4FD282FD19A00B8E592 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8CF4FC282FD19A00B8E592 /* Questions.swift */; };
 		4EC5883C282FE21100CF10A4 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5883B282FE21100CF10A4 /* GameSession.swift */; };
 		4EC5883E28302AED00CF10A4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5883D28302AED00CF10A4 /* Game.swift */; };
+		4EC5884028302C9500CF10A4 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5883F28302C9500CF10A4 /* Record.swift */; };
+		4EC588422830333700CF10A4 /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC588412830333700CF10A4 /* RecordsCaretaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		4E8CF4FC282FD19A00B8E592 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		4EC5883B282FE21100CF10A4 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		4EC5883D28302AED00CF10A4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4EC5883F28302C9500CF10A4 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		4EC588412830333700CF10A4 /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				4E5A92B2282FDC3B00FBA898 /* View */,
 				4EC5883B282FE21100CF10A4 /* GameSession.swift */,
 				4EC5883D28302AED00CF10A4 /* Game.swift */,
+				4EC5883F28302C9500CF10A4 /* Record.swift */,
+				4EC588412830333700CF10A4 /* RecordsCaretaker.swift */,
 			);
 			path = MillionareNew;
 			sourceTree = "<group>";
@@ -287,11 +293,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5A92AF282FDC1A00FBA898 /* MainMenuViewController.swift in Sources */,
+				4EC588422830333700CF10A4 /* RecordsCaretaker.swift in Sources */,
 				4E8CF4FD282FD19A00B8E592 /* Questions.swift in Sources */,
 				4EC5883E28302AED00CF10A4 /* Game.swift in Sources */,
 				4E8CF4CD282FD11000B8E592 /* AppDelegate.swift in Sources */,
 				4E5A92B1282FDC2900FBA898 /* GameViewController.swift in Sources */,
 				4EC5883C282FE21100CF10A4 /* GameSession.swift in Sources */,
+				4EC5884028302C9500CF10A4 /* Record.swift in Sources */,
 				4E8CF4CF282FD11000B8E592 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
