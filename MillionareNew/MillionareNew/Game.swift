@@ -21,7 +21,7 @@ class Game {
     }
     
     private init() {
-        
+        records = recordsCaretaker.retrive()
     }
     
     static let shared = Game()

@@ -149,6 +149,7 @@ class GameViewController: UIViewController {
 
         addButtons()
         configureActualQuestion()
+        game.gameSession = gameSession
     }
     
 
