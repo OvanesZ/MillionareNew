@@ -9,6 +9,6 @@ import UIKit
 
 
 struct Record: Codable {
-    let score: Int?
+    let score: Int
     let date: Date?
 }
