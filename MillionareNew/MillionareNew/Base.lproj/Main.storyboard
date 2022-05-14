@@ -21,25 +21,38 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Начать игру">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="qj1-Ro-Z3X" kind="presentation" id="968-GF-CUC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний результат" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7P-ky-hbK">
-                                <rect key="frame" x="129.5" y="496" width="155" height="18"/>
+                                <rect key="frame" x="129.5" y="526" width="155" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="945-MO-I3g">
+                                <rect key="frame" x="117.5" y="471" width="179" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Результаты">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="meF-fd-D0l" kind="presentation" id="oqd-vF-sFp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="h7P-ky-hbK" firstAttribute="top" secondItem="3IF-FL-N2i" secondAttribute="bottom" constant="15" id="PIQ-gA-HMQ"/>
+                            <constraint firstItem="h7P-ky-hbK" firstAttribute="top" secondItem="3IF-FL-N2i" secondAttribute="bottom" constant="45" id="PIQ-gA-HMQ"/>
                             <constraint firstItem="3IF-FL-N2i" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QXT-fW-467"/>
                             <constraint firstItem="h7P-ky-hbK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SMf-AP-lCz"/>
+                            <constraint firstItem="945-MO-I3g" firstAttribute="top" secondItem="3IF-FL-N2i" secondAttribute="bottom" constant="-10" id="WqV-3H-MmV"/>
+                            <constraint firstItem="945-MO-I3g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cgS-g0-Brz"/>
                             <constraint firstItem="3IF-FL-N2i" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ynQ-Oy-n7o"/>
                         </constraints>
                     </view>
@@ -47,6 +60,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="45" y="84"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="k5j-YS-L0B">
+            <objects>
+                <viewController id="meF-fd-D0l" customClass="ScoreViewController" customModule="MillionareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AO8-aQ-OA0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MVo-gw-tWr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordCell" textLabel="LDB-oe-bx3" detailTextLabel="JI0-f6-U34" style="IBUITableViewCellStyleValue1" id="FGI-bY-4TF">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FGI-bY-4TF" id="Waj-1k-P26">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LDB-oe-bx3">
+                                                    <rect key="frame" x="20" y="15" width="25" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JI0-f6-U34">
+                                                    <rect key="frame" x="361" y="15" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mwy-5v-cT4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MVo-gw-tWr" firstAttribute="leading" secondItem="Mwy-5v-cT4" secondAttribute="leading" id="hRy-nR-KP2"/>
+                            <constraint firstItem="Mwy-5v-cT4" firstAttribute="bottom" secondItem="MVo-gw-tWr" secondAttribute="bottom" id="heX-0t-yvI"/>
+                            <constraint firstItem="Mwy-5v-cT4" firstAttribute="trailing" secondItem="MVo-gw-tWr" secondAttribute="trailing" id="irS-53-ra1"/>
+                            <constraint firstItem="MVo-gw-tWr" firstAttribute="top" secondItem="Mwy-5v-cT4" secondAttribute="top" id="xAd-of-zkd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="MVo-gw-tWr" id="rMA-eW-GGH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYM-om-h4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="814"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="vCe-Wr-Rpd">
@@ -67,6 +136,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
