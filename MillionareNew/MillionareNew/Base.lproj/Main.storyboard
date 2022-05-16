@@ -112,14 +112,7 @@
         <!--Game View Controller-->
         <scene sceneID="vCe-Wr-Rpd">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="qj1-Ro-Z3X" customClass="GameViewController" customModule="MillionareNew" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UtO-RW-48S">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="T0a-8K-7ob"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
+                <viewController modalPresentationStyle="fullScreen" id="qj1-Ro-Z3X" customClass="GameViewController" customModule="MillionareNew" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfG-Xb-n4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918.84057971014499" y="83.705357142857139"/>

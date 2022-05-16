@@ -25,38 +25,65 @@ class GameViewController: UIViewController {
         
     questionLabel = UILabel(frame: CGRect(x: 25, y: 100, width: 350, height: 50))
     questionLabel.text = "Вопрос"
+        questionLabel.textColor = .orange
     self.view.addSubview(questionLabel)
         
         
     oneAnswerButton = UIButton(frame: CGRect(x: 25, y: 250, width: 275, height: 50))
-    oneAnswerButton.setTitle("ответ 1", for: .normal)
-    oneAnswerButton.backgroundColor = .gray
     oneAnswerButton.tag = 1
     oneAnswerButton.addTarget(self, action: #selector(pressButton(_:)), for: .touchUpInside)
     self.view.addSubview(oneAnswerButton)
     
     twoAnswerButton = UIButton(frame: CGRect(x: 25, y: 305, width: 275, height: 50))
-    twoAnswerButton.setTitle("ответ 2", for: .normal)
-    twoAnswerButton.backgroundColor = .gray
     twoAnswerButton.tag = 2
     twoAnswerButton.addTarget(self, action: #selector(pressButton(_:)), for: .touchUpInside)
     self.view.addSubview(twoAnswerButton)
     
     threeAnswerButton = UIButton(frame: CGRect(x: 25, y: 360, width: 275, height: 50))
-    threeAnswerButton.setTitle("ответ 3", for: .normal)
-    threeAnswerButton.backgroundColor = .gray
     threeAnswerButton.tag = 3
     threeAnswerButton.addTarget(self, action: #selector(pressButton(_:)), for: .touchUpInside)
     self.view.addSubview(threeAnswerButton)
     
     fourAnswerButton = UIButton(frame: CGRect(x: 25, y: 415, width: 275, height: 50))
-    fourAnswerButton.setTitle("ответ 4", for: .normal)
-    fourAnswerButton.backgroundColor = .gray
     fourAnswerButton.tag = 4
     fourAnswerButton.addTarget(self, action: #selector(pressButton(_:)), for: .touchUpInside)
     self.view.addSubview(fourAnswerButton)
 }
     
+    
+    override func viewWillLayoutSubviews() {
+        oneAnswerButton.translatesAutoresizingMaskIntoConstraints = false   // отключаю констрейнт перед установкой своих
+       let leftAnchor = oneAnswerButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15)
+       let rightAnchor = oneAnswerButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15)
+       let topAnchor = oneAnswerButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 350)
+       let heightAnchor = oneAnswerButton.heightAnchor.constraint(equalToConstant: 50)
+     //  oneAnswerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true    // выставляю кнопку в центр по оси Х
+        
+        twoAnswerButton.translatesAutoresizingMaskIntoConstraints = false   // отключаю констрейнт перед установкой своих
+        let leftAnchorTwoAnswerButton = twoAnswerButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15)
+        let rightAnchorTwoAnswerButton = twoAnswerButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15)
+        let topAnchorTwoAnswerButton = twoAnswerButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 405)
+        let heightAnchorTwoAnswerButton = twoAnswerButton.heightAnchor.constraint(equalToConstant: 50)
+        
+        threeAnswerButton.translatesAutoresizingMaskIntoConstraints = false   // отключаю констрейнт перед установкой своих
+        let leftAnchorThreeAnswerButton = threeAnswerButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15)
+        let rightAnchorThreeAnswerButton = threeAnswerButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15)
+        let topAnchorThreeAnswerButton = threeAnswerButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 460)
+        let heightAnchorThreeAnswerButton = threeAnswerButton.heightAnchor.constraint(equalToConstant: 50)
+        
+        fourAnswerButton.translatesAutoresizingMaskIntoConstraints = false   // отключаю констрейнт перед установкой своих
+        let leftAnchorFourAnswerButton = fourAnswerButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15)
+        let rightAnchorFourAnswerButton = fourAnswerButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15)
+        let topAnchorFourAnswerButton = fourAnswerButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 515)
+        let heightAnchorFourAnswerButton = fourAnswerButton.heightAnchor.constraint(equalToConstant: 50)
+        
+       NSLayoutConstraint.activate([rightAnchor, leftAnchor, topAnchor, heightAnchor, leftAnchorTwoAnswerButton, rightAnchorTwoAnswerButton, topAnchorTwoAnswerButton, heightAnchorTwoAnswerButton, leftAnchorThreeAnswerButton, rightAnchorThreeAnswerButton, topAnchorThreeAnswerButton, heightAnchorThreeAnswerButton, leftAnchorFourAnswerButton, rightAnchorFourAnswerButton, topAnchorFourAnswerButton, heightAnchorFourAnswerButton])      // активирую все констрейнты
+    }
+    
+    
+  
+
+   
     
     
     @objc func pressButton(_ sender: UIButton) {
