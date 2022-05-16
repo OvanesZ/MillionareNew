@@ -25,7 +25,9 @@ class GameViewController: UIViewController {
         
     questionLabel = UILabel(frame: CGRect(x: 25, y: 100, width: 350, height: 50))
     questionLabel.text = "Вопрос"
-        questionLabel.textColor = .orange
+        questionLabel.textColor = .black
+        questionLabel.font = UIFont.systemFont(ofSize: 20)      // размер шрифта
+        questionLabel.numberOfLines = 0         // Перенос длинного текста на другую строку
     self.view.addSubview(questionLabel)
         
         
