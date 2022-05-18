@@ -221,6 +221,7 @@ class GameViewController: UIViewController {
     
     
     
+    
     private func isAnswerRigth(sender button: UIButton) {
         if let answer = button.titleLabel?.text, let question = gameSession?.question {
             if question.isAnswerTrue(userAnswer: answer) {
