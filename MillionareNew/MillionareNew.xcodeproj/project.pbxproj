@@ -23,7 +23,6 @@
 		4EC5884028302C9500CF10A4 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5883F28302C9500CF10A4 /* Record.swift */; };
 		4EC588422830333700CF10A4 /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC588412830333700CF10A4 /* RecordsCaretaker.swift */; };
 		4EC5884428303CA800CF10A4 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5884328303CA800CF10A4 /* ScoreViewController.swift */; };
-		4EC588822835095100CF10A4 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC588812835095100CF10A4 /* Thread.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		4EC5883F28302C9500CF10A4 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		4EC588412830333700CF10A4 /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 		4EC5884328303CA800CF10A4 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
-		4EC588812835095100CF10A4 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +135,6 @@
 				4EC5883D28302AED00CF10A4 /* Game.swift */,
 				4EC5883F28302C9500CF10A4 /* Record.swift */,
 				4EC588412830333700CF10A4 /* RecordsCaretaker.swift */,
-				4EC588812835095100CF10A4 /* Thread.swift */,
 			);
 			path = MillionareNew;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 			files = (
 				4E5A92AF282FDC1A00FBA898 /* MainMenuViewController.swift in Sources */,
 				4EC588422830333700CF10A4 /* RecordsCaretaker.swift in Sources */,
-				4EC588822835095100CF10A4 /* Thread.swift in Sources */,
 				4E8CF4FD282FD19A00B8E592 /* Questions.swift in Sources */,
 				4EC5883E28302AED00CF10A4 /* Game.swift in Sources */,
 				4E8CF4CD282FD11000B8E592 /* AppDelegate.swift in Sources */,
