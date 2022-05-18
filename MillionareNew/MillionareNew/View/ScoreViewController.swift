@@ -9,6 +9,13 @@ import UIKit
 
 class ScoreViewController: UIViewController {
 
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self

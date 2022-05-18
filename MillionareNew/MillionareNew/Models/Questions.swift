@@ -26,6 +26,7 @@ struct Questions {
 
 
 
+
 enum QuestionEnum {
     case first
     case second
@@ -43,7 +44,7 @@ enum QuestionEnum {
         case .third:
             return Questions(question: "Единица измерения напряжения?", firstAnswer: "Ватт", secondAnswer: "Вольт", thirdAnswer: "Ампер", fourthAnswer: "Метр", trueAnswer: "Вольт")
         case .fourth:
-            return Questions(question: "Какая из планет солнечной системы самая горячая", firstAnswer: "Марс", secondAnswer: "Венера", thirdAnswer: "Юпитер", fourthAnswer: "Земля", trueAnswer: "Венера")
+            return Questions(question: "Какая из планет солнечной системы самая горячая?", firstAnswer: "Марс", secondAnswer: "Венера", thirdAnswer: "Юпитер", fourthAnswer: "Земля", trueAnswer: "Венера")
         case .fifth:
             return Questions(question: "Какой из этих городов вымышленный?", firstAnswer: "Миргород", secondAnswer: "Славгород", thirdAnswer: "Старгород", fourthAnswer: "Белгород", trueAnswer: "Славгород")
         }
