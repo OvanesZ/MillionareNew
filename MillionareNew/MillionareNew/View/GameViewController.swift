@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
     
     private var gameSession: GameSession? = GameSession()
     
+   
     func addComponents() {
         
         
@@ -76,6 +77,7 @@ class GameViewController: UIViewController {
         nextQuestionButton = UIButton(frame: CGRect(x: 25, y: 470, width: 50, height: 50))
         nextQuestionButton.backgroundColor = .systemOrange
         nextQuestionButton.setTitle("Следующий вопрос", for: .normal)
+        nextQuestionButton.titleLabel?.font = UIFont(name: "Arial", size: 15)
         nextQuestionButton.layer.cornerRadius = 20
         nextQuestionButton.layer.borderWidth = 3
         nextQuestionButton.layer.borderColor = UIColor.white.cgColor
@@ -145,8 +147,6 @@ class GameViewController: UIViewController {
        NSLayoutConstraint.activate([rightAnchor, leftAnchor, topAnchor, heightAnchor, leftAnchorTwoAnswerButton, rightAnchorTwoAnswerButton, topAnchorTwoAnswerButton, heightAnchorTwoAnswerButton, leftAnchorThreeAnswerButton, rightAnchorThreeAnswerButton, topAnchorThreeAnswerButton, heightAnchorThreeAnswerButton, leftAnchorFourAnswerButton, rightAnchorFourAnswerButton, topAnchorFourAnswerButton, heightAnchorFourAnswerButton, rightAnchorNextQuestionButton, topAnchorNextQuestionButton, heightAnchorNextQuestionButton, leftAnchorNextQuestionButton, rightAnchorEndPlay, topAnchorEndPlay, heightAnchorEndPlay, leftAnchorEndPlay])      // активирую все констрейнты
     }
     
-    
-    
     @objc func pressEndPlay(_ sender: UIButton) {
         dismiss(animated: true, completion: { [self] in
             game.addRecord(record: Record(score: self.gameSession?.score ?? 0, date: self.gameSession?.date))
@@ -180,8 +180,6 @@ class GameViewController: UIViewController {
             return
         }
     }
-    
-    
     
     
     private func configureActualQuestion() {
