@@ -95,6 +95,9 @@ class GameViewController: UIViewController {
         logoImageView.image = logo
         self.view.insertSubview(logoImageView, belowSubview: oneAnswerButton)   // отправил logo ниже кнопок
         logoImageView.layer.opacity = 0.3
+        UIView.animate(withDuration: 0.1, delay: 2, animations: {
+            self.logoImageView.layer.opacity = 0.5
+        })
 }
     
     
@@ -146,6 +149,11 @@ class GameViewController: UIViewController {
         
        NSLayoutConstraint.activate([rightAnchor, leftAnchor, topAnchor, heightAnchor, leftAnchorTwoAnswerButton, rightAnchorTwoAnswerButton, topAnchorTwoAnswerButton, heightAnchorTwoAnswerButton, leftAnchorThreeAnswerButton, rightAnchorThreeAnswerButton, topAnchorThreeAnswerButton, heightAnchorThreeAnswerButton, leftAnchorFourAnswerButton, rightAnchorFourAnswerButton, topAnchorFourAnswerButton, heightAnchorFourAnswerButton, rightAnchorNextQuestionButton, topAnchorNextQuestionButton, heightAnchorNextQuestionButton, leftAnchorNextQuestionButton, rightAnchorEndPlay, topAnchorEndPlay, heightAnchorEndPlay, leftAnchorEndPlay])      // активирую все констрейнты
     }
+    
+    
+    
+    
+    
     
     @objc func pressEndPlay(_ sender: UIButton) {
         dismiss(animated: true, completion: { [self] in
@@ -261,27 +269,27 @@ class GameViewController: UIViewController {
     
     func greenButton(_ sender: UIButton) {
         switch sender.tag {
-        case 1:  UIView.animate(withDuration: 0.1, delay: 0.5, animations: {
+        case 1:  UIView.animate(withDuration: 0.1, animations: {
             self.oneAnswerButton.backgroundColor = .systemYellow }, completion: { _ in
-                UIView.animate(withDuration: 0.1, delay: 3, animations: {
+                UIView.animate(withDuration: 0.1, delay: 2, animations: {
                     self.oneAnswerButton.backgroundColor = .systemGreen
                 })
             })
-        case 2:  UIView.animate(withDuration: 0.1, delay: 0.5, animations: {
+        case 2:  UIView.animate(withDuration: 0.1, animations: {
             self.twoAnswerButton.backgroundColor = .systemYellow }, completion: { _ in
-                UIView.animate(withDuration: 0.1, delay: 3, animations: {
+                UIView.animate(withDuration: 0.1, delay: 2, animations: {
                     self.twoAnswerButton.backgroundColor = .systemGreen
                 })
             })
-        case 3:  UIView.animate(withDuration: 0.1, delay: 0.5, animations: {
+        case 3:  UIView.animate(withDuration: 0.1, animations: {
             self.threeAnswerButton.backgroundColor = .systemYellow }, completion: { _ in
-                UIView.animate(withDuration: 0.1, delay: 3, animations: {
+                UIView.animate(withDuration: 0.1, delay: 2, animations: {
                     self.threeAnswerButton.backgroundColor = .systemGreen
                 })
             })
-        case 4:  UIView.animate(withDuration: 0.1, delay: 0.5, animations: {
+        case 4:  UIView.animate(withDuration: 0.1, animations: {
             self.fourAnswerButton.backgroundColor = .systemYellow }, completion: { _ in
-                UIView.animate(withDuration: 0.1, delay: 3, animations: {
+                UIView.animate(withDuration: 0.1, delay: 2, animations: {
                     self.fourAnswerButton.backgroundColor = .systemGreen
                 })
             })
@@ -293,27 +301,27 @@ class GameViewController: UIViewController {
     
     func redButton(_ sender: UIButton) {
         switch sender.tag {
-        case 1:  UIView.animate(withDuration: 0.1, delay: 0.5, animations: {
+        case 1:  UIView.animate(withDuration: 0.1, animations: {
             self.oneAnswerButton.backgroundColor = .systemYellow }, completion: { _ in
-                UIView.animate(withDuration: 0.1, delay: 3, animations: {
+                UIView.animate(withDuration: 0.1, delay: 2, animations: {
                     self.oneAnswerButton.backgroundColor = .systemRed
                 })
             })
-        case 2:  UIView.animate(withDuration: 0.1, delay: 0.5, animations: {
+        case 2:  UIView.animate(withDuration: 0.1, animations: {
             self.twoAnswerButton.backgroundColor = .systemYellow }, completion: { _ in
-                UIView.animate(withDuration: 0.1, delay: 3, animations: {
+                UIView.animate(withDuration: 0.1, delay: 2, animations: {
                     self.twoAnswerButton.backgroundColor = .systemRed
                 })
             })
-        case 3:  UIView.animate(withDuration: 0.1, delay: 0.5, animations: {
+        case 3:  UIView.animate(withDuration: 0.1, animations: {
             self.threeAnswerButton.backgroundColor = .systemYellow }, completion: { _ in
-                UIView.animate(withDuration: 0.1, delay: 3, animations: {
+                UIView.animate(withDuration: 0.1, delay: 2, animations: {
                     self.threeAnswerButton.backgroundColor = .systemRed
                 })
             })
-        case 4:  UIView.animate(withDuration: 0.1, delay: 0.5, animations: {
+        case 4:  UIView.animate(withDuration: 0.1, animations: {
             self.fourAnswerButton.backgroundColor = .systemYellow }, completion: { _ in
-                UIView.animate(withDuration: 0.1, delay: 3, animations: {
+                UIView.animate(withDuration: 0.1, delay: 2, animations: {
                     self.fourAnswerButton.backgroundColor = .systemRed
                 })
             })
