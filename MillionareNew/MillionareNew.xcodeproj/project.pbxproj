@@ -11,6 +11,8 @@
 		4E5A92B1282FDC2900FBA898 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A92B0282FDC2900FBA898 /* GameViewController.swift */; };
 		4E7DA50D283798EC00D12B1A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DA50C283798EC00D12B1A /* SettingsViewController.swift */; };
 		4E7DA50F28379A3D00D12B1A /* AddQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DA50E28379A3D00D12B1A /* AddQuestionsViewController.swift */; };
+		4E7DA511283B758C00D12B1A /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DA510283B758C00D12B1A /* Difficulty.swift */; };
+		4E7DA513283B814200D12B1A /* SerialOrRandomStrategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DA512283B814200D12B1A /* SerialOrRandomStrategies.swift */; };
 		4E8CF4CD282FD11000B8E592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8CF4CC282FD11000B8E592 /* AppDelegate.swift */; };
 		4E8CF4CF282FD11000B8E592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8CF4CE282FD11000B8E592 /* SceneDelegate.swift */; };
 		4E8CF4D4282FD11000B8E592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8CF4D2282FD11000B8E592 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		4E5A92B0282FDC2900FBA898 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		4E7DA50C283798EC00D12B1A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4E7DA50E28379A3D00D12B1A /* AddQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsViewController.swift; sourceTree = "<group>"; };
+		4E7DA510283B758C00D12B1A /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		4E7DA512283B814200D12B1A /* SerialOrRandomStrategies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialOrRandomStrategies.swift; sourceTree = "<group>"; };
 		4E8CF4C9282FD11000B8E592 /* MillionareNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MillionareNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8CF4CC282FD11000B8E592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E8CF4CE282FD11000B8E592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4E7DA514283B814800D12B1A /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				4E7DA512283B814200D12B1A /* SerialOrRandomStrategies.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
 		4E8CF4C0282FD11000B8E592 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,8 @@
 				4EC5883D28302AED00CF10A4 /* Game.swift */,
 				4EC5883F28302C9500CF10A4 /* Record.swift */,
 				4EC588412830333700CF10A4 /* RecordsCaretaker.swift */,
+				4E7DA510283B758C00D12B1A /* Difficulty.swift */,
+				4E7DA514283B814800D12B1A /* Strategies */,
 			);
 			path = MillionareNew;
 			sourceTree = "<group>";
@@ -305,6 +319,7 @@
 				4EC588422830333700CF10A4 /* RecordsCaretaker.swift in Sources */,
 				4E7DA50D283798EC00D12B1A /* SettingsViewController.swift in Sources */,
 				4E8CF4FD282FD19A00B8E592 /* Questions.swift in Sources */,
+				4E7DA513283B814200D12B1A /* SerialOrRandomStrategies.swift in Sources */,
 				4EC5883E28302AED00CF10A4 /* Game.swift in Sources */,
 				4E8CF4CD282FD11000B8E592 /* AppDelegate.swift in Sources */,
 				4E5A92B1282FDC2900FBA898 /* GameViewController.swift in Sources */,
@@ -313,6 +328,7 @@
 				4EC5884428303CA800CF10A4 /* ScoreViewController.swift in Sources */,
 				4EC5884028302C9500CF10A4 /* Record.swift in Sources */,
 				4E8CF4CF282FD11000B8E592 /* SceneDelegate.swift in Sources */,
+				4E7DA511283B758C00D12B1A /* Difficulty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

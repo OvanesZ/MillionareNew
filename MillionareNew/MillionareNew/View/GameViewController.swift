@@ -11,6 +11,37 @@ class GameViewController: UIViewController {
     
     let game = Game.shared
     var delegate: LastGameResultProtocol?
+    var difficulty: Difficulty = .serialQuestions
+    
+    
+    private let gameStrategy: SerialOrRandomStrategy
+    init(gamestrategy: SerialOrRandomStrategy) {
+        self.gameStrategy = gamestrategy
+        super.init()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    // MARK: - private properties
+    
+    private var createGameStrategy: SerialOrRandomStrategy {
+        switch difficulty {
+        case .serialQuestions:
+            return SerialQuestionsStrategy()
+        case .randomQuestions:
+            return RandomQuestionsStrategy()
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
     
     var oneAnswerButton = UIButton()
     var twoAnswerButton = UIButton()
@@ -34,6 +65,9 @@ class GameViewController: UIViewController {
         questionLabel.textColor = .white
         questionLabel.font = UIFont.systemFont(ofSize: 20)      // размер шрифта
         questionLabel.numberOfLines = 0         // Перенос длинного текста на другую строку
+//        questionLabel.backgroundColor = .systemBlue
+//        questionLabel.layer.masksToBounds = true
+//        questionLabel.layer.cornerRadius = 20
         self.view.addSubview(questionLabel)
         
         
@@ -190,26 +224,38 @@ class GameViewController: UIViewController {
     }
     
     
+//    private func configureActualQuestion() {
+//        guard let score = gameSession?.score else { return }
+//
+//
+//
+//
+//        switch score {
+//        case 0:
+//            gameSession?.question = QuestionEnum.allCases.randomElement()?.questions
+//        case 10:
+//            gameSession?.question = QuestionEnum.allCases.randomElement()?.questions
+//        case 20:
+//            gameSession?.question = QuestionEnum.allCases.randomElement()?.questions
+//        case 30:
+//            gameSession?.question = QuestionEnum.allCases.randomElement()?.questions
+//        case 40:
+//            gameSession?.question = QuestionEnum.allCases.randomElement()?.questions
+//        default:
+//            break
+//        }
+//        showNewQuestion()
+//    }
+    
+    
+    
     private func configureActualQuestion() {
-        guard let score = gameSession?.score else { return }
         
-        switch score {
-        case 0:
-            gameSession?.question = QuestionEnum.first.questions
-        case 10:
-            gameSession?.question = QuestionEnum.second.questions
-        case 20:
-            gameSession?.question = QuestionEnum.third.questions
-        case 30:
-            gameSession?.question = QuestionEnum.fourth.questions
-        case 40:
-            gameSession?.question = QuestionEnum.fifth.questions
-        default:
-            break
-        }
+        gameStrategy.configureActualQuestions(in: gameSession)
+        
+        
         showNewQuestion()
     }
-    
     
     
     
@@ -333,12 +379,15 @@ class GameViewController: UIViewController {
     
  
     
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        
+       
+        
         addComponents()
         configureActualQuestion()
         game.gameSession = gameSession

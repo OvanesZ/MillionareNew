@@ -46,7 +46,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7ks-nC-sVI" kind="presentation" id="lC5-1c-MGS"/>
+                                    <segue destination="7ks-nC-sVI" kind="presentation" identifier="settingsGame" id="lC5-1c-MGS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-X2-YL0">
@@ -255,15 +255,37 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nZC-Aw-9Tf">
+                                <rect key="frame" x="72.5" y="194" width="269" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Последовательно"/>
+                                    <segment title="Рандомно"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите порядок отображения вопросов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRt-Bz-U5F">
+                                <rect key="frame" x="53.5" y="144" width="307" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P1P-K6-ksg"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="moL-5B-AJW" firstAttribute="trailing" secondItem="P1P-K6-ksg" secondAttribute="trailing" id="3vR-oX-1YJ"/>
+                            <constraint firstItem="gRt-Bz-U5F" firstAttribute="top" secondItem="P1P-K6-ksg" secondAttribute="top" constant="100" id="PH0-mk-I4D"/>
                             <constraint firstItem="moL-5B-AJW" firstAttribute="top" secondItem="P1P-K6-ksg" secondAttribute="top" id="UQU-Zq-3y0"/>
+                            <constraint firstItem="nZC-Aw-9Tf" firstAttribute="centerX" secondItem="P1P-K6-ksg" secondAttribute="centerX" id="Vg2-SH-SMq"/>
+                            <constraint firstItem="nZC-Aw-9Tf" firstAttribute="top" secondItem="P1P-K6-ksg" secondAttribute="top" constant="150" id="Zui-W1-j9V"/>
+                            <constraint firstItem="gRt-Bz-U5F" firstAttribute="centerX" secondItem="P1P-K6-ksg" secondAttribute="centerX" id="c6J-Zk-x9i"/>
                             <constraint firstItem="moL-5B-AJW" firstAttribute="leading" secondItem="P1P-K6-ksg" secondAttribute="leading" id="pdK-Zt-AjD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="difficultyControl" destination="nZC-Aw-9Tf" id="7OA-Pk-etv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNT-WX-Kqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

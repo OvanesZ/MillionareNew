@@ -27,7 +27,7 @@ struct Questions {
 
 
 
-enum QuestionEnum {
+enum QuestionEnum: CaseIterable {
     case first
     case second
     case third
