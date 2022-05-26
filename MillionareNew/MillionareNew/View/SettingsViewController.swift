@@ -24,6 +24,22 @@ class SettingsViewController: UIViewController {
     }
     
     
+    
+   
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "settingsGame":
@@ -36,7 +52,10 @@ class SettingsViewController: UIViewController {
     }
     
     
+    
     @IBAction func backButton(_ sender: Any) {
+        Game.shared.stateSegmentControl = selectedDifficulty
+
         dismiss(animated: true, completion: nil)
     }
     
@@ -60,6 +79,7 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+ 
 
 
 }

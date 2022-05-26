@@ -16,8 +16,9 @@ class GameViewController: UIViewController {
     var delegate: LastGameResultProtocol?
    
     
-    var difficulty: Difficulty = .randomQuestions
+ //   var difficulty: Difficulty = .randomQuestions
     
+    var difficulty = Game.shared.stateSegmentControl
     
 //    private let gameStrategy: SerialOrRandomStrategy        // свойство, хранящее стратегию
 //
@@ -44,6 +45,8 @@ class GameViewController: UIViewController {
             return SerialQuestionsStrategy()
         case .randomQuestions:
             return RandomQuestionsStrategy()
+        case .none:
+            return SerialQuestionsStrategy()
         }
     }
     

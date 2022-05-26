@@ -12,6 +12,7 @@ class Game {
     var result: [Int] = []
     var name = ""
     var gameSession: GameSession?
+    var stateSegmentControl: Difficulty?
     let recordsCaretaker = RecordsCaretaker()
     
     private(set) var records: [Record] = [] {
