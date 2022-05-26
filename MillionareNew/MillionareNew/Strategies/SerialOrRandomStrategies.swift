@@ -31,11 +31,8 @@ final class RandomQuestionsStrategy: SerialOrRandomStrategy {
         default:
             break
         }
-        
     }
 }
-
-
 
 final class SerialQuestionsStrategy: SerialOrRandomStrategy {
     

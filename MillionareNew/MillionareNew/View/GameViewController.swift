@@ -9,25 +9,36 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    
+    
+    
     let game = Game.shared
     var delegate: LastGameResultProtocol?
-    var difficulty: Difficulty = .serialQuestions
+   
+    
+    var difficulty: Difficulty = .randomQuestions
     
     
-    private let gameStrategy: SerialOrRandomStrategy
-    init(gamestrategy: SerialOrRandomStrategy) {
-        self.gameStrategy = gamestrategy
-        super.init()
-    }
+//    private let gameStrategy: SerialOrRandomStrategy        // свойство, хранящее стратегию
+//
+//    // MARK: - constructions
+//
+//    init(gameStrategy: SerialOrRandomStrategy) {
+//        self.gameStrategy = gameStrategy
+//        super.init()
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     
-    // MARK: - private properties
     
-    private var createGameStrategy: SerialOrRandomStrategy {
+    // MARK: - private properties state use strategy
+    // вычисляемое свойство, оно создает подходящую стратегию
+    
+    private var stateSegmentControlGameStrategy: SerialOrRandomStrategy {
         switch difficulty {
         case .serialQuestions:
             return SerialQuestionsStrategy()
@@ -251,8 +262,24 @@ class GameViewController: UIViewController {
     
     private func configureActualQuestion() {
         
-        gameStrategy.configureActualQuestions(in: gameSession)
+//        guard let score = gameSession?.score else {return}
         
+        stateSegmentControlGameStrategy.configureActualQuestions(in: gameSession)
+        
+//        switch score {
+//        case 0:
+//            stateSegmentControlGameStrategy.configureActualQuestions(in: gameSession)
+//        case 10:
+//            stateSegmentControlGameStrategy.configureActualQuestions(in: gameSession)
+//        case 20:
+//            stateSegmentControlGameStrategy.configureActualQuestions(in: gameSession)
+//        case 30:
+//            stateSegmentControlGameStrategy.configureActualQuestions(in: gameSession)
+//        case 40:
+//            stateSegmentControlGameStrategy.configureActualQuestions(in: gameSession)
+//        default:
+//            break
+//        }
         
         showNewQuestion()
     }
@@ -377,20 +404,23 @@ class GameViewController: UIViewController {
     }
     
     
- 
+    
     
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
-       
-        
         addComponents()
         configureActualQuestion()
         game.gameSession = gameSession
+        
+
+
+       
+      
+      
     }
     
 

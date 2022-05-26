@@ -24,7 +24,7 @@
                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fzq-Aa-dM2" kind="presentation" id="csx-Nr-Y8n"/>
+                                    <segue destination="fzq-Aa-dM2" kind="presentation" identifier="settingsGame" id="csx-Nr-Y8n"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="945-MO-I3g">
@@ -46,7 +46,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7ks-nC-sVI" kind="presentation" identifier="settingsGame" id="lC5-1c-MGS"/>
+                                    <segue destination="7ks-nC-sVI" kind="presentation" identifier="" id="lC5-1c-MGS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-X2-YL0">
@@ -224,13 +224,13 @@
         <!--Настройки-->
         <scene sceneID="zws-xt-0ph">
             <objects>
-                <viewController title="Настройки" modalPresentationStyle="fullScreen" id="7ks-nC-sVI" customClass="SettingsViewController" customModule="MillionareNew" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Настройки" id="7ks-nC-sVI" customClass="SettingsViewController" customModule="MillionareNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MuR-A5-k54">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" backIndicatorImage="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="moL-5B-AJW">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,7 +239,7 @@
                                     <navigationItem title="Настройки" id="d76-MO-8cf">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="URA-5S-W9j">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ELT-5J-zFR">
-                                                <rect key="frame" x="20" y="8" width="88.5" height="28"/>
+                                                <rect key="frame" x="20" y="14" width="88.5" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Назад" buttonSize="small">
@@ -256,7 +256,7 @@
                                 </items>
                             </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nZC-Aw-9Tf">
-                                <rect key="frame" x="72.5" y="194" width="269" height="32"/>
+                                <rect key="frame" x="72.5" y="150" width="269" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="Последовательно"/>
@@ -265,7 +265,7 @@
                                 <color key="selectedSegmentTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите порядок отображения вопросов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRt-Bz-U5F">
-                                <rect key="frame" x="53.5" y="144" width="307" height="18"/>
+                                <rect key="frame" x="53.5" y="100" width="307" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
